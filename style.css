@@ -19,6 +19,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100vh;
 }
 
@@ -34,4 +35,17 @@ body {
   font-size: var(--xlarge);
   font-weight: 400;
   margin-top: -30px;
+}
+
+/* Search */
+.serach-input input {
+  width: 600px;
+  padding: 10px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.serach-input input::placeholder {
+  font-size: var(--medium);
+  color: gray;
 }
