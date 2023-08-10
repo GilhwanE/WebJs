@@ -24,6 +24,7 @@ body {
 }
 
 .main-container .main-wrapper {
+  position: fixed;
   text-align: center;
 }
 
@@ -65,4 +66,36 @@ body {
   font-size: var(--small);
   font-weight: 600;
   color: rgb(114, 234, 122);
+}
+
+/* Bookmark */
+.bookmark-open {
+  display: flex;
+  justify-content: flex-end;
+  width: 240px;
+  padding: 15px 30px;
+  font-size: var(--small);
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bookmark-open div,
+.bookmark-close div {
+  cursor: pointer;
+}
+
+.bookmark-bar {
+  width: 240px;
+  padding: 10px 30px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  min-height: calc(100vh - 70px);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
 }
