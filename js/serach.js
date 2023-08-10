@@ -1,8 +1,9 @@
 const serachElement = document.getElementById('serach');
 
 const serachResult = () => {
-  const resultvalue = serachElement.value;
+  let resultvalue = serachElement.value;
   window.location.href = `https://www.google.com/search?q=${resultvalue}`;
+  resultvalue = '';
 };
 
 const enterKey = (event) => {
