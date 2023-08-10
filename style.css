@@ -49,3 +49,10 @@ body {
   font-size: var(--medium);
   color: gray;
 }
+
+/* Quote */
+.quote-contents p {
+  font-size: var(--medium);
+  font-weight: 600;
+  color: rgb(114, 234, 122);
+}
