@@ -51,8 +51,18 @@ body {
 }
 
 /* Quote */
+.quote-contents {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .quote-contents p {
-  font-size: var(--medium);
+  font-size: var(--small);
   font-weight: 600;
   color: rgb(114, 234, 122);
 }
