@@ -83,6 +83,20 @@ body {
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
 }
+.bookmark-close {
+  display: block;
+  justify-content: flex-end;
+  width: 240px;
+  padding: 15px 30px;
+  font-size: var(--small);
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
 .bookmark-open div,
 .bookmark-close div {
