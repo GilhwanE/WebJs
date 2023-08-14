@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&family=Red+Hat+Display:wght@600&display=swap');
 
 :root {
   --xlarge: 170px;
@@ -33,6 +33,7 @@ body {
   font-weight: 400;
 }
 .main-wrapper .time {
+  font-family: 'Red Hat Display', sans-serif;
   font-size: var(--xlarge);
   font-weight: 400;
   margin-top: -30px;
@@ -44,6 +45,9 @@ body {
   padding: 10px;
   border-radius: 30px;
   text-align: center;
+}
+.serach-input input:focus::placeholder {
+  color: transparent;
 }
 
 .serach-input input::placeholder {
@@ -69,6 +73,12 @@ body {
 }
 
 /* Bookmark */
+.bookmark-input {
+  display: none;
+}
+.bookmark-input.on {
+  display: block;
+}
 .bookmark-open {
   display: flex;
   justify-content: flex-end;
@@ -112,4 +122,28 @@ body {
   min-height: calc(100vh - 70px);
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* bookmarkAdd */
+.bookmark-item-add-btn {
+  background: rgba(96, 99, 99, 0.5);
+  padding: 10px 20px;
+  outline: none;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.bookmark-item-input-btn {
+  display: flex;
+  gap: 20px;
+}
+#new-bookmark-name-input,
+#new-bookmark-url-input {
+  outline: none;
+  width: calc(100% - 20px);
+  overflow: hidden;
+  padding: 10px;
+}
+.new-bookmark-url {
+  margin-top: 15px;
 }
