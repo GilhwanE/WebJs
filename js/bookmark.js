@@ -4,9 +4,9 @@ const bookmarkItemList = document.getElementById('bookmrk-list');
 let bookmarklist = [];
 
 if (localStorage.getItem('bookmarklist')) {
-  bookmarklist = localStorage.getItem('bookmarklist');
+  bookmarklist = JSON.parse(localStorage.getItem('bookmarklist'));
 } else {
-  localStorage.setItem('bookmarklist', bookmarklist); // 현재 저장되어 있는 bookmarklist 넣기
+  localStorage.setItem('bookmarklist', JSON.stringify(bookmarklist)); // 현재 저장되어 있는 bookmarklist 넣기
 }
 
 // 북마크 추가 기능
@@ -23,6 +23,7 @@ const addBookmarkItem = () => {
   localStorage.setItem('bookmarklist', JSON.stringify(bookmarklist));
   name.value = '';
   url.value = '';
+  setBookmarkItem({ name: name, url: url, createAt: createAt });
   AddBtnBookmark();
 };
 
@@ -37,14 +38,18 @@ const AddBtnBookmark = () => {
 };
 
 // 북마크 리스트 보여주기
+const setBookmarkItem = (item) => {
+  console.log(item);
+};
+
 const setBookmarkList = () => {
   bookmarklist.forEach((item) => {
-    console.log(item);
+    setBookmarkItem(item);
   });
 };
 
 AddBtnbookmark.addEventListener('click', AddBtnBookmark);
 document.getElementById('add-btn').addEventListener('click', addBookmarkItem);
 document.getElementById('cancel-btn').addEventListener('click', AddBtnBookmark);
-
+setBookmarkList();
 //
