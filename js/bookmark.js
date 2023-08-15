@@ -39,7 +39,20 @@ const AddBtnBookmark = () => {
 
 // 북마크 리스트 보여주기
 const setBookmarkItem = (item) => {
-  console.log(item);
+  const bookmarkItem = document.createElement('div');
+  bookmarkItem.classList.add('bookmark-item');
+  bookmarkItem.id = `bookmark-item-${item.createAt}`;
+
+  const bookmarkInfo = document.createElement('div');
+  bookmarkInfo.classList.add('bookmark-info');
+  const bookmarkUrl = document.createElement('a');
+  bookmarkUrl.classList.add('bookmark-url');
+
+  const urlIcon = document.createElement('div');
+  urlIcon.classList.add('url-icon');
+
+  const urlIconImg = document.createElement('img');
+  const nameElement = document.createElement('div');
 };
 
 const setBookmarkList = () => {
