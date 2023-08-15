@@ -12,6 +12,13 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   width: 100%;
   margin: 0 auto;
+  background-image: url('https://source.unsplash.com/user/hbin12212/likes');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  color: white;
 }
 
 /* Main */
@@ -45,6 +52,8 @@ body {
   padding: 10px;
   border-radius: 30px;
   text-align: center;
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.971);
 }
 .serach-input input:focus::placeholder {
   color: transparent;
