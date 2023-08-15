@@ -46,4 +46,4 @@ const setNowTime = (hour, minutes) => {
 getNowDate();
 getNowTime();
 
-setInterval(getNowTime(), 1000);
+setInterval(getNowTime(), 100);
