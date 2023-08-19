@@ -18,12 +18,12 @@
     }
     let name = document.getElementById('new-bookmark-name-input').value;
     let url = document.getElementById('new-bookmark-url-input').value;
-    let createAt = Date.now();
-    bookmarklist.push({ name: name, url: url, createAt: createAt });
+    let createAt = Date.now(); // 현재날짜
+    bookmarklist.push({ name: name, url: url, createAt: createAt }); // 객체형태
 
-    localStorage.setItem('bookmarklist', JSON.stringify(bookmarklist));
-    name.value = '';
-    url.value = '';
+    localStorage.setItem('bookmarklist', JSON.stringify(bookmarklist)); // setItem할때 배열이기 때문에 stringify
+    document.getElementById('new-bookmark-name-input').value = '';
+    document.getElementById('new-bookmark-url-input').value = '';
     setBookmarkItem({ name: name, url: url, createAt: createAt });
     AddBtnBookmark();
   };
@@ -65,7 +65,7 @@
     urlIcon.classList.add('url-icon');
 
     const urlIconImg = document.createElement('img');
-    // urlIconImg.src = `https://www.google.com/s2/favicons?domain_url=${item.url}`;
+    urlIconImg.src = `https://www.google.com/s2/favicons?domain_url=${item.url}`;
 
     const nameElement = document.createElement('div');
     nameElement.classList.add('name');
