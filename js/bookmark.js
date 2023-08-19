@@ -42,9 +42,7 @@
     const isDelete = window.confirm('정말 삭제하시겠습니까?');
     if (isDelete) {
       let bookmarklist = JSON.parse(localStorage.getItem('bookmarklist'));
-      let nowBookmarklist = bookmarklist.filter((item) => {
-        item.createAt !== id;
-      });
+      let nowBookmarklist = bookmarklist.filter((elem) => elem.createAt !== id); // 조건을 충족하는 요소만 반환
       localStorage.setItem('bookmarklist', JSON.stringify(nowBookmarklist));
       document.getElementById(`bookmark-item-${id}`).remove();
     }
@@ -60,6 +58,7 @@
     bookmarkInfo.classList.add('bookmark-info');
     const bookmarkUrl = document.createElement('a');
     bookmarkUrl.classList.add('bookmark-url');
+    bookmarkUrl.href = item.url;
 
     const urlIcon = document.createElement('div');
     urlIcon.classList.add('url-icon');
@@ -82,6 +81,7 @@
     bookmarkItem.appendChild(bookmarkDelBtn);
     bookmarkInfo.appendChild(bookmarkUrl);
     bookmarkUrl.appendChild(urlIcon);
+    bookmarkUrl.appendChild(nameElement);
     urlIcon.append(urlIconImg);
 
     bookmarkItemList.appendChild(bookmarkItem);
