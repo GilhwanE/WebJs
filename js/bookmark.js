@@ -65,7 +65,7 @@
     urlIcon.classList.add('url-icon');
 
     const urlIconImg = document.createElement('img');
-    urlIconImg.src = `https://www.google.com/s2/favicons?domain_url=${item.url}`;
+    // urlIconImg.src = `https://www.google.com/s2/favicons?domain_url=${item.url}`;
 
     const nameElement = document.createElement('div');
     nameElement.classList.add('name');
