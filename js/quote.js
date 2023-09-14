@@ -11,6 +11,7 @@ const quoteView = (result) => {
   quoteElement.textContent = result;
 };
 
+
 const quoteAPI = async () => {
   try {
     const data = await fetch('https://random-quote.hyobb.com/').then((res) =>
@@ -23,6 +24,7 @@ const quoteAPI = async () => {
     quoteView('명언이 들어간다');
   }
 };
+
 
 if (quoteItem) {
   let { createDate, quoteData } = JSON.parse(quoteItem);
