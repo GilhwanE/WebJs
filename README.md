@@ -23,8 +23,13 @@ Link : https://main--darling-daffodil-9692c4.netlify.app/
 
 - 하루에 한가지의 명언만 보여주고 날짜가 변경됨에 따라 변하는 명언을 호출하도록 변경
 
+3. 배포 이후 git push 과정에서 오류과정이 있었다.
+   에러코드 : Can't push refs to remote. Try running "Pull" first to integrate your changes.
+   원인 : Github의 기본 생성 브랜치 이름이 입력한 것과 달라서 나타난 것.
+   해결 : git pull --rebase origin branchname
+
 <br/>
 
-## 🖥 서비스 화면
+## 🖥 서비스 화면 (PC)
 
 <img width="1434" alt="스크린샷 2023-08-21 16 17 17" src="https://github.com/GilhwanE/WebJs/assets/63918911/02c97908-91ee-47d5-8bde-165a6e897156">
