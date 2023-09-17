@@ -47,4 +47,3 @@ getNowDate();
 getNowTime();
 
 setInterval(getNowTime, 1000);
-

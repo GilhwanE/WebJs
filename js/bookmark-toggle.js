@@ -8,8 +8,9 @@
   // localStorage 기능
   const isBookmarkBarOpen = localStorage.getItem('isBookmarkBarOpen');
   if (isBookmarkBarOpen === 'close') {
-    bookmarkOpen.style.display = 'none';
-    bookmarkClose.style.display = 'flex';
+    // close상태라면 ,
+    bookmarkOpen.style.display = 'none'; // Open 디스플레이 none
+    bookmarkClose.style.display = 'flex'; // close 버튼을 보여줘
     bookmarkBar.style.display = 'none';
   } else {
     bookmarkOpen.style.display = 'flex';
